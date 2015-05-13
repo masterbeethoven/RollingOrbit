@@ -27,4 +27,23 @@ public class ObstacleMoveL : MonoBehaviour {
 
 
 	}
+
+	void OnTriggerEnter(Collider wall){
+		//Destroy(gameObject);
+		
+		/*if (collided ==false){
+			
+			count++;
+			// play a randomized pickup sound: use either this or event:/pickup-single
+			FMOD_StudioSystem.instance.PlayOneShot("event:/pickup-ran", new Vector3(0,0,0));
+			collided =true; 
+			if(rend != null){rend.enabled = false;}
+		}*/
+		
+		if (wall.tag == "Wall")
+		{
+			Application.LoadLevel("minigame");
+		}
+		
+	}
 }	

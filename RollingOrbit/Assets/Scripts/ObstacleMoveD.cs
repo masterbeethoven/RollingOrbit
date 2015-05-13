@@ -33,7 +33,7 @@ public class ObstacleMoveD : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter(){
+	void OnTriggerEnter(Collider wall){
 		//Destroy(gameObject);
 		
 		/*if (collided ==false){
@@ -45,8 +45,10 @@ public class ObstacleMoveD : MonoBehaviour {
 			if(rend != null){rend.enabled = false;}
 		}*/
 
-		Application.LoadLevel("minigame");
-
+		if (wall.tag == "Wall")
+		{
+			Application.LoadLevel("minigame");
+		}
 	
 	}
 

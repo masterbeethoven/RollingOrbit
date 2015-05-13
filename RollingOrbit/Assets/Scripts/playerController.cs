@@ -70,6 +70,7 @@ public class playerController : MonoBehaviour
 
 		music = FMOD_StudioSystem.instance.GetEvent("event:/Take 2");
 
+
 		// ensures that roll will always have SOME value, i.e. not be null
 		if (rollBall.getParameter("rollVel", out rollVel) != FMOD.RESULT.OK){
 			Debug.LogError("rollVel parameter not found on rollBall sound event");
@@ -218,7 +219,8 @@ public class playerController : MonoBehaviour
 			//music.stop (0);
 			//winText.text = "YOU WIN!";
 			Destroy(GameObject.Find("Level1"));
-			GameObject instance = Instantiate(Resources.Load("Level2", typeof(GameObject))) as GameObject;
+			//Instantiation gave strange behavior
+			//GameObject instance = Instantiate(Resources.Load("Level2", typeof(GameObject))) as GameObject;
 			//Instantiate(Level2,new Vector3 (4.747057f, 0.5f,-1.820937f), Quaternion.identity);
 			// play a victory cue after all 12 cubes are collected
 			FMOD_StudioSystem.instance.PlayOneShot("event:/win", new Vector3(0,0,0));
