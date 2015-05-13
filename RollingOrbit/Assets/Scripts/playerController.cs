@@ -11,7 +11,7 @@ public class playerController : MonoBehaviour
 	public GUIText velRollingText;
 	public GUIText mhText;
 	public GUIText mvText;
-	//public GUIText level1Text;
+	public GUIText level1Text;
 	//private float TextTime = 5f;
 	public bool obstacle = false; 
 	public bool levelCondition = true;
@@ -51,8 +51,8 @@ public class playerController : MonoBehaviour
 	void Start ()
 	{
 			
-		/*level1Text.text = "Level 1";
-		if (TextTime >=5f)
+		level1Text.text = "Level 1";
+		/*if (TextTime >=5f)
 		{
 			Destroy(level1Text);
 		}*/
@@ -184,7 +184,7 @@ public class playerController : MonoBehaviour
 		if(other.gameObject.tag == "Wall")
 		{	
 			// reports velocity on moment of impact with a wall
-			velText.text = "Velocity: " + pVel.ToString();
+			//velText.text = "Velocity: " + pVel.ToString();
 			// play a single collide sound
 			// NOTE: to do this, each wall contains a duplicate object that has "Is Trigger" checked
 			//       Unity will not allow objects with Is Trigger to retain their collision physics     

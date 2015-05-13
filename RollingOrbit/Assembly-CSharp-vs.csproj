@@ -48,10 +48,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\KatamariScript.cs" />
      <Compile Include="Assets\Scripts\Level2Destroy.cs" />
+     <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\ObstacleMoveD.cs" />
      <Compile Include="Assets\Scripts\ObstacleMoveL.cs" />
      <Compile Include="Assets\Scripts\ObstacleMoveR.cs" />
      <Compile Include="Assets\Scripts\ObstacleMoveU.cs" />
+     <Compile Include="Assets\Scripts\Poolable.cs" />
      <Compile Include="Assets\Scripts\SinScript.cs" />
      <Compile Include="Assets\Scripts\WinTrigger.cs" />
      <Compile Include="Assets\Scripts\cameraController.cs" />
