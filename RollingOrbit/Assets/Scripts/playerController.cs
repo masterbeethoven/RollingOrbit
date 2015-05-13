@@ -69,6 +69,7 @@ public class playerController : MonoBehaviour
 
 
 		music = FMOD_StudioSystem.instance.GetEvent("event:/Take 2");
+		Debug.Log(music);
 
 
 		// ensures that roll will always have SOME value, i.e. not be null
