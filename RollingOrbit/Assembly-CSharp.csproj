@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\ObstacleMoveR.cs" />
      <Compile Include="Assets\Scripts\ObstacleMoveU.cs" />
      <Compile Include="Assets\Scripts\SinScript.cs" />
+     <Compile Include="Assets\Scripts\WinTrigger.cs" />
      <Compile Include="Assets\Scripts\cameraController.cs" />
      <Compile Include="Assets\Scripts\destroyObj.cs" />
      <Compile Include="Assets\Scripts\particleCrash.cs" />

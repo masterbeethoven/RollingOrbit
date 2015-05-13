@@ -151,7 +151,7 @@ public class playerController : MonoBehaviour
 					//new SinScript(other.gameObject.tag == "PickUp");
 					SinScript sinScript =GetComponent<SinScript>();
 					sinScript.SendMessage("Update");
-					Debug.Log ("we're all sinning");
+					
 				//sinScript.Update();
  
 				}
@@ -205,6 +205,14 @@ public class playerController : MonoBehaviour
 			// play the sound
 			wallHit.start();
 		}
+
+		if(other.gameObject.tag == "WinTrigger"){
+
+			music.stop (0);
+			winText.text = "You prevail in death!";
+			// play a victory cue after all 12 cubes are collected
+			FMOD_StudioSystem.instance.PlayOneShot("event:/win", new Vector3(0,0,0));
+		}
 	}
 
 	// function to update the counter text
@@ -216,9 +224,13 @@ public class playerController : MonoBehaviour
 		//if (destroyObj.count >= 24) 
 		if (destroyObj.count >= 12) 
 		{
-			//music.stop (0);
-			//winText.text = "YOU WIN!";
 			Destroy(GameObject.Find("Level1"));
+				
+			{
+					//music.stop (0);
+					//winText.text = "You prevail in death!";
+					
+			}
 			//Instantiation gave strange behavior
 			//GameObject instance = Instantiate(Resources.Load("Level2", typeof(GameObject))) as GameObject;
 			//Instantiate(Level2,new Vector3 (4.747057f, 0.5f,-1.820937f), Quaternion.identity);
