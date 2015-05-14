@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\destroyObj.cs" />
      <Compile Include="Assets\Scripts\particleCrash.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
+     <Compile Include="Assets\Scripts\playerController2.cs" />
      <Compile Include="Assets\Scripts\rotator.cs" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />

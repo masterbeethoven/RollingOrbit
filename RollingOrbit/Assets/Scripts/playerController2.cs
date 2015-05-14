@@ -1,7 +1,7 @@
 ﻿	using UnityEngine;
 using System.Collections;
 
-public class playerController : MonoBehaviour 
+public class playerController2 : MonoBehaviour 
 {	
 	// these code objects are paired with GUI objects in the Player's Inspector
 	// click Player in the Hierarchy, open the Inspector, and voila!
@@ -11,7 +11,7 @@ public class playerController : MonoBehaviour
 	public GUIText velRollingText;
 	public GUIText mhText;
 	public GUIText mvText;
-	public GUIText level1Text;
+	//public GUIText level1Text;
 	//private float TextTime = 5f;
 	public bool obstacle = false; 
 	public bool levelCondition = true;
@@ -50,11 +50,9 @@ public class playerController : MonoBehaviour
 	// function executes when game begins
 	void Start ()
 	{
-		music = FMOD_StudioSystem.instance.GetEvent("event:/Take 2");
-		Debug.Log(music);
-
-		level1Text.text = "Level 1";
-		/*if (TextTime >=5f)
+			
+		/*level1Text.text = "Level 1";
+		if (TextTime >=5f)
 		{
 			Destroy(level1Text);
 		}*/
@@ -71,8 +69,6 @@ public class playerController : MonoBehaviour
 
 
 		music = FMOD_StudioSystem.instance.GetEvent("event:/Take 2");
-		//Debug.Log(music);
-
 
 		// ensures that roll will always have SOME value, i.e. not be null
 		if (rollBall.getParameter("rollVel", out rollVel) != FMOD.RESULT.OK){
@@ -154,7 +150,6 @@ public class playerController : MonoBehaviour
 					//new SinScript(other.gameObject.tag == "PickUp");
 					SinScript sinScript =GetComponent<SinScript>();
 					sinScript.SendMessage("Update");
-					
 				//sinScript.Update();
  
 				}
