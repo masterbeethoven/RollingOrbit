@@ -18,8 +18,7 @@ public class ObjectPool : MonoBehaviour {
 	void Start ()
 	{	
 		objectPool = this.gameObject;
-		//enemyPool = this.gameObject;
-		//pickupPool = this.gameObject;
+
 
 		
 		pickups = new Queue<GameObject>();
@@ -55,7 +54,7 @@ public class ObjectPool : MonoBehaviour {
 		result.SetActive(true);
 		result.GetComponent<Poolable>().Reset();
 
-		//from bulletscript
+
 		
 		return result;	
 	}
